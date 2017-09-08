@@ -1,9 +1,7 @@
 package com.vidasoft.magman.model;
 
-import javax.persistence.Entity;
 import java.time.LocalDate;
 
-@Entity
 public class Subscriber extends User {
 
     private String streetAddress;

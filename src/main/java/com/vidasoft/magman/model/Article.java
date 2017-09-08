@@ -1,33 +1,16 @@
 package com.vidasoft.magman.model;
 
-import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-@Entity
-@NamedQueries({
-        @NamedQuery(name = "getAllArticles",
-                query = "SELECT article FROM Article article LEFT JOIN FETCH article.author author ORDER BY article.publishDate"),
-        @NamedQuery(name = "findArticlesByAuthor",
-                query = "SELECT article FROM Article article WHERE article.author = :author")
-})
 public class Article {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    @Version
-    private int version;
-
     private String title;
-    @Column(length = 20000)
     private String content;
-    @ManyToOne
     private Author author;
     private LocalDate publishDate;
-    @OneToMany
     private List<Comment> comments = new ArrayList<>();
 
     public Article() {
@@ -38,22 +21,6 @@ public class Article {
         this.content = content;
         this.author = author;
         this.publishDate = publishDate;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public int getVersion() {
-        return version;
-    }
-
-    public void setVersion(int version) {
-        this.version = version;
     }
 
     public String getTitle() {
@@ -128,6 +95,7 @@ public class Article {
                 ", content='" + displayContent + '\'' +
                 ", author=" + author.getUserName() +
                 ", publishDate=" + publishDate +
+                ", comments=" + comments +
                 '}';
     }
 }

@@ -1,23 +1,13 @@
 package com.vidasoft.magman.model;
 
-import javax.persistence.*;
 import java.util.Objects;
 
-@Entity
 public class Advertiser {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    @Version
-    private int version;
 
     private String name;
     private String website;
     private String contactEmail;
-    @Lob
     private byte[] logo;
-    @Enumerated(EnumType.STRING)
     private SponsorPackage sponsorPackage;
 
     public Advertiser() {
@@ -33,22 +23,6 @@ public class Advertiser {
         this.contactEmail = contactEmail;
         this.logo = logo;
         this.sponsorPackage = sponsorPackage;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public int getVersion() {
-        return version;
-    }
-
-    public void setVersion(int version) {
-        this.version = version;
     }
 
     public String getName() {
