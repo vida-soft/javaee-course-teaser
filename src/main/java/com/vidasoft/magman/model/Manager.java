@@ -1,5 +1,8 @@
 package com.vidasoft.magman.model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Manager extends User {
 
     public Manager() {

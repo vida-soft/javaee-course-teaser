@@ -1,5 +1,8 @@
 package com.vidasoft.magman.model;
 
+import javax.persistence.*;
+
+@Entity
 public class Author extends User {
 
     private boolean isRegular;
