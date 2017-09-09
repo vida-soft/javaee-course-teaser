@@ -1,0 +1,13 @@
+= Java EE Fundamentals course
+
+These are the introductory chapters of the _Java EE Fundamentals_ course created by VIDA Software.
+
+It uses interactive approach to cover most of the technologies that are part of the Java EE umbrella specification.
+Besides the usual slides, used by the lecturer, the course also includes a comprehensive hands on lab.
+The lab guides the participants to better understand the details of each chapter by developing a web application running on a Java EE application server. 
+
+The course has three profiles: _minimal_, _sensible_ and _extended_.
+They all consist of several chapters, each of which builds on top of the previous one.
+More about the profiles and the individual installments can be found in the link:notation.pdf[course notation].
+
+You can dive into the experience of running the hands on lab, by opening the link:handout-teaser.pdf[course handout] and doing the first two chapters: JPA and Servlets.
